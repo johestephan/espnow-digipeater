@@ -63,12 +63,12 @@ If you plan to run the ESP8266 Gateway permanently attached to a headless server
 When passing the device into a Podman container (running Debian or Fedora), ensure you map the hardware correctly:
 ```bash
 podman run -d --device=/dev/ttyUSB0:/dev/ttyUSB0:rwm my-python-bridge
+```
 
 ## 📦 The Packet Structure
 All nodes communicate using a tightly packed binary struct:
 
-'''
-C++
+```
 struct __attribute__((packed)) EspNowPocsagPacket {
   uint8_t  type;          // Protocol identifier (0x11 for POCSAG)
   uint8_t  ttl;           // Hop counter (decrements on relay)
@@ -78,4 +78,4 @@ struct __attribute__((packed)) EspNowPocsagPacket {
   uint8_t  functional;    // POCSAG message type
   char     message[81];   // Payload array
 };
-'''
+```
