@@ -1,3 +1,5 @@
+Libvrary and updates via https://github.com/johestephan/UniversalMesh
+
 # DIY ESP-NOW Digipeater Mesh
 
 A lightweight, stateless mesh network built on raw 802.11 ESP-NOW Action Frames. This project bypasses the heavy overhead of standard TCP/IP mesh libraries (like `painlessMesh`) in favor of a lightning-fast, APRS-style digipeater architecture.
